@@ -1,0 +1,50 @@
+!!! 5
+%html
+	%head
+		%title
+			TopTal
+		= stylesheet_link_tag 'grid960', 'font', 'page'
+	
+	%body
+		#wrapper
+			.container_16
+
+				%a#logo.grid_3.alpha{:href => "/home"}
+					= image_tag "logo.jpg"
+				
+				
+				#apply_to_work.grid_10.omega
+					%p
+						Apply to work with TopTal as
+					
+					.apply_options
+						%ul
+							%li.as_company= link_to 'Company'
+							%li.as_developer= link_to 'Developer'
+					
+					%p
+						Or
+					.login= link_to 'Login'
+									
+				#navigation_menu.grid_16.omega
+					%ul.grid_12.omega
+						%li.item= link_to 'What'
+						%li.item= link_to 'Why?'
+						%li.item= link_to 'How?'
+						%li.item= link_to 'Clients'
+						%li.item= link_to 'Team'
+						%li.item= link_to 'Labs'
+						%li.item= link_to 'F.A.Q.'
+						%li.item= link_to 'Contact us'
+			= yield
+			
+			
+			
+			
+			
+			#footer
+				.container_16
+					%p.info
+						&copy; 2011 TopTal, LLC. All rights reserved.
+						
+						

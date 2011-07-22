@@ -1,0 +1,190 @@
+@import 'bourbon/bourbon'
+
+*
+	margin: 0
+	padding: 0
+	
+	
+h1, h2, h3, h4, h5
+	margin: 5px 0
+
+ul, ol
+	list-style-type: none	
+.border
+	border: 1px solid #000
+			
+body
+	background: url('../images/bg_wrapper.jpg')
+	font-family: "AllerRegular"
+	text-shadow: 1px 1px 1px #000
+	
+	
+.container_16
+	overflow: hidden
+	
+	
+#logo
+	margin-top: 35px
+	
+	
+#apply_to_work
+
+	text-shadow: none
+	color: #7a7878
+	font-size: 13px
+	line-height: 28px
+	padding: 5px 0
+	float: right
+	
+	.as_company, .as_developer, .login
+		width: 60px
+		float: left
+		margin: 0 10px
+		text-align: center
+		a
+			color: #fff
+			
+	p
+		float: left
+		margin: 0 5px
+			
+	.as_company
+		@include button(#317fc5)
+	.as_developer
+		@include button(#ef8a43)
+	.login
+		@include button(#dedede)
+
+#navigation_menu
+	padding: 10px 0
+	ul
+		float: right
+	.item
+		font-family: "AllerRegular"
+		list-style-type: none
+		float: left
+		padding: 4px 20px
+		a:hover
+			color: #000
+			text-decoration: none
+		
+
+#main_presentation
+	background: #233f77
+	overflow: hidden
+	padding: 10px 0 20px 0
+	border-top: 3px solid #638cb5
+	
+	h1
+		color: #fd8932
+		
+	.about_our_work, .benefits
+		float: left
+		color: #fff
+		
+	.about_our_work
+		width: 500px
+		margin-right: 40px
+		
+		p
+			margin: 10px 0
+			text-align: justify
+			line-height: 24px
+		
+		
+	.benefits	
+		@include border-radius(8px)
+		@include box-shadow (inset -1px 1px 5px #000)
+		width: 380px
+		margin-top: 10px
+		padding-bottom: 15px
+		background: #4e6a9a
+		li
+			background: url('../images/bg_checkmark.png') no-repeat 8px 4px
+			text-indent: 65px
+			line-height: 26px
+			margin: 10px 2px
+			&:hover
+				text-shadow: 0 1px 2px #999
+			h2
+				padding-top: 10px
+			.desc
+				width: 75%
+				margin-left: 65px
+				text-indent: 0
+			
+		.button
+			margin-top: 20px
+			@include button(#fe700c)
+			height: 40px
+			line-height: 40px
+			width: 320px
+			margin: 0 auto
+			text-align: center
+			
+			a
+				color: #fff
+				margin: 0 auto
+				font-size: 24px
+				text-shadow: 1px -1px 1px #000
+				&:hover
+					text-decoration: none
+			img
+				float: right
+				margin-top: 5px
+		
+#clients
+	text-shadow: none
+	background: #fff
+	border-top: 1px solid #dedede
+	border-bottom: 1px solid #dedede
+	padding: 35px 0
+	
+
+#about_us
+	padding: 60px 0
+	text-shadow: none
+	.sections
+		overflow: hidden
+	
+	h3
+		font-size: 22px
+	
+	.top_engineers, .any_technology 
+		width: 430px
+		padding-bottom: 20px
+		text-indent: 60px
+		
+	.top_engineers
+		float: left
+		background: url('../images/bg_top_engineers.jpg') no-repeat
+	
+	.any_technology
+		float: right
+		background: url('../images/bg_any_technology.jpg') no-repeat -6px -4px
+		
+	.text
+		font: normal 16px/24px Arial
+		color: #6c6868
+		margin-left: 60px
+		text-indent: 0
+	
+	.what_are_we_looking_for
+		margin-top: 20px
+		text-indent: 60px
+	
+		a
+			text-shadow: none
+			&:hover
+				color: #000
+				text-decoration: none
+
+/* Footer */
+
+#footer
+	background: #fff
+	border-top: 1px solid #dedede
+	padding: 40px 0
+	text-shadow: none
+	color: #7a7878
+	
