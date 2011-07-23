@@ -1,7 +1,10 @@
 Toptal::Application.routes.draw do
   
   root :to => 'page#home'
+  resources :developers
+  
   match 'home/' => 'page#home'
+  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

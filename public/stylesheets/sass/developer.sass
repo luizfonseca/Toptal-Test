@@ -1,0 +1,38 @@
+@import 'bourbon/bourbon'
+#main_presentation
+	.about
+		color: #fff
+		text-shadow: 0 -1px 1px #000
+		font-family: Arial
+#developer
+	font-family: Arial
+	background: #fff
+	border-top: 1px solid #dedede
+	border-bottom: 1px solid #dedede
+	padding: 20px 0
+	h3, h4, h5
+		color: #000
+		text-shadow: none
+		font-family: Arial
+		margin: 10px 0
+
+
+	input 
+		border: 1px solid #999
+
+	.search
+
+		margin: 20px 0
+	
+		input[type="text"]
+			outline: none
+			width: 600px
+			@include box-shadow(inset -1px 1px 3px #333)
+			height: 25px
+			text-indent: 10px
+.submit_btn
+	@include button(#dedede)
+.edit_btn
+	@include button(#ffcc00)
+.delete_btn
+	@include button(#ff3300)

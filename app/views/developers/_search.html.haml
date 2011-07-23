@@ -1,0 +1,7 @@
+- @developer.each do |developer|
+	%li
+		= developer.name
+		= link_to ""
+		= link_to "edit", edit_developer_path(developer), :class => "edit_btn"
+		= link_to "delete", developer, :method => "delete", :confirm => "Are you sure?", :class => "delete_btn"
+		

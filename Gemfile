@@ -27,12 +27,32 @@
 
 # Paperclip, for file uploading
 
-  #gem 'paperclip'
+  #gem 'paperclip' 
+
+
+# RMagick, to deal with ImageMagick :)
+
+  #gem 'rmagick'
+
 
 # If you need authentication...
 
   #gem 'devise'
 
+# If you need a search engine...
+
+  gem 'meta_search'
+
+# If you need HARD sql conditions on search
+
+  #gem 'meta_where'
+
+#if you need pagination 
+
+  #gem 'will_paginate'
+  gem 'kaminari'   
+
+ 
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
