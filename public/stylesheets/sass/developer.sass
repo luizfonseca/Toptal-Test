@@ -10,9 +10,10 @@
 	border-top: 1px solid #dedede
 	border-bottom: 1px solid #dedede
 	padding: 20px 0
+	text-shadow: none
+	
 	h3, h4, h5
 		color: #000
-		text-shadow: none
 		font-family: Arial
 		margin: 10px 0
 
@@ -20,18 +21,48 @@
 	input 
 		border: 1px solid #999
 
+	.list
+		font-size: 14px
+		
 	.search
-
 		margin: 20px 0
-	
+
 		input[type="text"]
 			outline: none
 			width: 600px
 			@include box-shadow(inset -1px 1px 3px #333)
+			@include border-radius(15px)
 			height: 25px
 			text-indent: 10px
-.submit_btn
-	@include button(#dedede)
+			float: left
+		.submit_btn
+			@include button(#dedede)
+			float: left
+			
+			
+#results
+	li
+		overflow: hidden
+		height: 40px
+		margin: 5px 0
+		padding: 5px 0
+		&:hover
+			background: #ebebeb
+			border-bottom: 1px solid #999
+	.id, .name
+		float: left
+		margin-right: 20px
+	.id
+		background: #333
+		@include box-shadow(1px 1px 4px #333)
+		color: #fff
+		text-align: center
+		text-shadow: 1px 1px 1px #000
+		width: 60px
+		height: 40px
+		line-height: 40px
+	.name
+		
 .edit_btn
 	@include button(#ffcc00)
 .delete_btn

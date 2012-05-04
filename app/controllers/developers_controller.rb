@@ -1,10 +1,24 @@
 class DevelopersController < ApplicationController
   
+  layout 'page'
+  before_filter :search
+
+  
   def index
-    @developer = Developer.all
+    respond_to do |format|
+      format.json { render :json => @developers }
+      format.html
+     end
   end
   
   
+  def search
+    @search = Developer.search(params[:search])
+    @developers = @search.all 
+
+  end
+
+
   def new
     @developer = Developer.new
   end
@@ -25,18 +39,13 @@ class DevelopersController < ApplicationController
   end
   
   def update
+    @developer = Developer.find(params[:id])
     if @developer.update_attributes(params[:developer])
       flash[:notice] = "Developer updated"
     end
     redirect_to :back and return
   end
-  
-  
-  def search 
-    @developer = Developer.search(params[:query])
-  end
-  
-  
+
   def show
   end
 

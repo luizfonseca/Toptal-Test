@@ -4,28 +4,29 @@
 		%title
 			TopTal
 		= stylesheet_link_tag 'grid960', 'font', 'page', 'developer'
-	
+		= javascript_include_tag :all
+
 	%body
 		#wrapper
 			.container_16
 
 				%a#logo.grid_3.alpha{:href => "/home"}
 					= image_tag "logo.jpg"
-				
-				
+
+
 				#apply_to_work.grid_10.omega
 					%p
 						Apply to work with TopTal as
-					
+
 					.apply_options
 						%ul
 							%li.as_company= link_to 'Company'
 							%li.as_developer= link_to 'Developer', developers_path
-					
+
 					%p
 						Or
 					.login= link_to 'Login'
-									
+
 				#navigation_menu.grid_16.omega
 					%ul.grid_12.omega
 						%li.item= link_to 'What'
@@ -36,15 +37,42 @@
 						%li.item= link_to 'Labs'
 						%li.item= link_to 'F.A.Q.'
 						%li.item= link_to 'Contact us'
+		- if controller.controller_name == 'developers'
+
+
+			#main_presentation
+				.container_16
+					%h1 Apply to join our network
+					.about TopTal selects only the top developers. When working with TopTal, you'll be connected with an elite network of software engineers, top companies and resources for you to leverage throughout your life.
+
+			#developer
+				.container_16
+					%h5 You can search by name, language or any field
+					.search
+						= simple_form_for @search do |f|
+							= f.input :name_or_observation_contains, :label => '', :placeholder => 'Type anything you want to find'
+							= f.button :submit, :value => 'Search', :class => 'submit_btn'
+
+					.list
+
+						= yield
+
+
+		- else
+
 			= yield
-			
-			
-			
-			
-			
+
+
+
+
+
 			#footer
 				.container_16
 					%p.info
 						&copy; 2011 TopTal, LLC. All rights reserved.
-						
-						
+
+
+		= javascript_include_tag "http://www.google.com/jsapi"
+		%script
+			google.load('jquery', '1.6.1')
+

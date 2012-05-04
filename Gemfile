@@ -15,7 +15,7 @@
   gem 'haml'
   gem 'sass'
   gem 'jquery-rails'
-
+  gem 'simple_form'
 
 # Mixins for sass 3.1+ 
 
